@@ -1,11 +1,11 @@
 {
   "$schema": "./info.schema.json",
   "schemaVersion": 1,
-  "contentVersion": 1,
+  "contentVersion": 2,
   "updatedAt": "2026-09-17T00:00:00Z",
   "page": {
     "eyebrow": "FITZOR",
-    "title": "Info",
+    "title": "Fitzor Hub",
     "intro": "Product news, contributor credits and ways to help shape what comes next."
   },
   "sections": [
