@@ -1,0 +1,28 @@
+{
+  "$schema": "./info.schema.json",
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "updatedAt": "2026-09-17T00:00:00Z",
+  "page": {
+    "eyebrow": "FITZOR",
+    "title": "Info",
+    "intro": "Product news, contributor credits and ways to help shape what comes next."
+  },
+  "sections": [
+    {
+      "id": "announcements",
+      "type": "announcement",
+      "title": "ANNOUNCEMENTS",
+      "body": "Updates and new Fitzor features will appear here."
+    },
+    {
+      "id": "credits-support",
+      "type": "credits",
+      "title": "CREDITS & SUPPORT",
+      "body": "Team credits and optional ways to support Fitzor are coming soon."
+    }
+  ],
+  "feedback": {
+    "enabled": false
+  }
+}

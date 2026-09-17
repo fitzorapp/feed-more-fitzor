@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fitzorapp.github.io/feed-more-fitzor/info.schema.json",
+  "title": "Fitzor Info Feed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "contentVersion", "updatedAt", "page", "sections", "feedback"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "contentVersion": { "type": "integer", "minimum": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "intro"],
+      "properties": {
+        "eyebrow": { "type": "string", "maxLength": 40 },
+        "title": { "type": "string", "maxLength": 80 },
+        "intro": { "type": "string", "maxLength": 400 }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "title", "body"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "maxLength": 60 },
+          "type": { "enum": ["announcement", "credits", "support", "link"] },
+          "title": { "type": "string", "maxLength": 100 },
+          "body": { "type": "string", "maxLength": 1200 },
+          "badge": { "type": "string", "maxLength": 20 },
+          "action": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "url"],
+            "properties": {
+              "label": { "type": "string", "maxLength": 40 },
+              "url": { "type": "string", "format": "uri", "pattern": "^https://" }
+            }
+          }
+        }
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "endpoint": { "type": "string", "format": "uri", "pattern": "^https://" }
+      }
+    }
+  }
+}
