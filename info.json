@@ -1,8 +1,8 @@
 {
   "$schema": "./info.schema.json",
   "schemaVersion": 1,
-  "contentVersion": 4,
-  "updatedAt": "2026-09-18T00:00:00Z",
+  "contentVersion": 5,
+  "updatedAt": "2026-09-19T00:00:00Z",
   "page": {
     "eyebrow": "FITZOR",
     "title": "Fitzor Hub",
@@ -10,16 +10,20 @@
   },
   "sections": [
     {
-      "id": "announcements",
+      "id": "welcome-to-fitzor-hub",
       "type": "announcement",
-      "title": "ANNOUNCEMENTS",
-      "body": "Updates and new Fitzor features will appear here."
+      "title": "Welcome to Fitzor Hub",
+      "body": "This is your home for Fitzor news, practical guides and new ways to shape what comes next. Fresh announcements will appear here automatically—no app update required.",
+      "badge": "NEW",
+      "date": "19 Sep 2026"
     },
     {
-      "id": "credits-support",
-      "type": "credits",
-      "title": "CREDITS & SUPPORT",
-      "body": "Team credits and optional ways to support Fitzor are coming soon."
+      "id": "fitzor-mix-your-workout-your-way",
+      "type": "announcement",
+      "title": "Your workout, remixed",
+      "body": "Fitzor Mix can build a fresh workout around your focus, equipment and session size. Use it once for today or save it as a routine you can return to anytime.",
+      "badge": "SPOTLIGHT",
+      "date": "19 Sep 2026"
     }
   ],
   "feedback": {
